@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="367102df-6099-4bf6-8219-160432bf9897" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +29,7 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="2E7GfrCgOzFn049uk3s2KRpo7Ry" />
-  <component name="ProjectLevelVcsManager">
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -44,7 +45,7 @@
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "SONARLINT_PRECOMMIT_ANALYSIS": "true"
   }
-}]]></component>
+
   <component name="RunManager">
     <configuration default="true" type="JetRunConfigurationType">
       <module name="NormalTest" />
