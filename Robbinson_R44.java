@@ -10,7 +10,7 @@ public class Robbinson_R44 extends Holicpters {
                 "flightRange= " + flightRange;
     }
 
-    Robbinson_R44(int capacity, int carrying, int flightRange) {
+    p Robbinson_R44(int capacity, int carrying, int flightRange) {
 
         super(capacity, carrying, flightRange);
     }

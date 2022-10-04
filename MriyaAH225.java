@@ -9,7 +9,7 @@ public class MriyaAH225 extends PassangerPlanes {
     }
 
 
-    MriyaAH225(int capacity, int carrying, int flightRange) {
+    public MriyaAH225(int capacity, int carrying, int flightRange) {
         super(capacity, carrying, flightRange);
     }
 

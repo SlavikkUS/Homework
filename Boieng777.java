@@ -9,7 +9,7 @@ public class Boieng777 extends PassangerPlanes {
                 "flightRange= " + flightRange;
     }
 
-    Boieng777(int capacity, int carrying, int flightRange) {
+    public Boieng777(int capacity, int carrying, int flightRange) {
         super(capacity, carrying, flightRange);
 
     }

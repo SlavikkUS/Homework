@@ -1,9 +1,9 @@
 package HomeFive;
 
-public class PassangerPlanes extends Flyeble {
+public class PassangerPlane extends Flyeble {
 
 
-    PassangerPlanes(int capacity, int carrying, int flightRange) {
+    PassangerPlane(int capacity, int carrying, int flightRange) {
         super(capacity, carrying, flightRange);
     }
 
