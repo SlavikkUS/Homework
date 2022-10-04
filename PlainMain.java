@@ -1,6 +1,6 @@
 package HomeFive;
 
-public class Flyeble implements Comparable<Flyeble> {
+public class PlainMain implements Comparable<Flyeble> {
     int capacity;
     int carrying;
     int flightRange;
@@ -17,7 +17,7 @@ public class Flyeble implements Comparable<Flyeble> {
         return flightRange;
     }
 
-    public Flyeble(int capacity, int carrying, int flightRange) {
+    public PlainMain(int capacity, int carrying, int flightRange) {
         this.capacity = capacity;
         this.carrying = carrying;
         this.flightRange = flightRange;
