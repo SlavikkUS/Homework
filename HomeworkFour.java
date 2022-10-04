@@ -5,31 +5,26 @@ package HomerworkFour;
  * author Usenkov Slava;
  */
 
-import java.util.Scanner;
 
-public class HomeworkFour {
+import java.util.*;
+
+public class Unique {
+
     public static void main(String[] args) {
-        System.out.print("Enter your text:");
-        Scanner scanner = new Scanner(System.in);
-        String words = scanner.nextLine();
-        System.out.print("Uniques words in text: ");
-        findUniquesWords(words);
-        scanner.close();
+        String str = "Listen to the news from today and read the text at the same time. Listen to the news from today without reading the text";
+        findUniqueWords(str);
+
     }
 
-    private static void findUniquesWords(String words) {
-        String[] arrayWords = words.split(" ");
-        for (int i = 0; i < arrayWords.length; i++) {
-            int numbers = 1;
-            for (int j = i + 1; j < arrayWords.length; j++) {
-                if (arrayWords[i].equalsIgnoreCase(arrayWords[j])) {
-                    numbers++;
-                    arrayWords[j] = "";
-                }
-            }
-            if (numbers == 1) {
-                System.out.print(arrayWords[i] + " ");
+    public static void findUniqueWords(String str) {
+        HashSet<String> output = new HashSet<>();
+        String[] array = str.split("\\s+");
+        for (int i = 0; i < array.length; i++) {
+            if (!output.contains(array[i])) {
+                output.add(array[i]);
             }
         }
+
+        System.out.print("Number unique words is: " + output.size());
     }
 }
