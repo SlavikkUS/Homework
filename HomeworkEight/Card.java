@@ -1,21 +1,38 @@
 package HomeworkEight;
 
 public class Card {
-    public int getMoney() {
+
+    private CardType cardType;
+    private Double money;
+    private String pin;
+
+    public Card(CardType cardType, Double money, String pin) {
+        this.cardType = cardType;
+        this.money = money;
+        this.pin = pin;
+    }
+
+    public CardType getCardType() {
+        return cardType;
+    }
+
+    public void setCardType(CardType cardType) {
+        this.cardType = cardType;
+    }
+
+    public Double getMoney() {
         return money;
     }
 
-    public String getPassword() {
-        return password;
-    }
-
-    public Card(int money, String password) {
+    public void setMoney(Double money) {
         this.money = money;
-        this.password = password;
     }
 
-    public int money;
-    public String password;
+    public String getPin() {
+        return pin;
+    }
 
-
+    public void setPin(String pin) {
+        this.pin = pin;
+    }
 }
