@@ -2,13 +2,17 @@ package HomeworkEight;
 
 public class MainHomeworkEight {
     public static void main(String[] args) throws Exception {
-        DebitCard debitCard = new DebitCard(100_000, "3453");
-        OverdraftCard overdraftCard = new OverdraftCard(130_000, "2343");
-        debitCard.enterPassword();
-        System.out.println(debitCard.refillCard());
-        debitCard.paymentProcessForDebitCard(debitCard.refillCard());
-        overdraftCard.enterPassword();
-        System.out.println(overdraftCard.refillCard());
-        overdraftCard.paymentProcessForOverdraftCard(debitCard.refillCard());
+        Card debitCard = new Card(CardType.DEBIT, 100.0, "1234");
+        ATM atm = new ATM();
+
+        atm.withdrawMoney(debitCard);
+        atm.topUp(debitCard);
+        System.out.println(debitCard.getMoney());
+
+        Card overdraftCard = new Card(CardType.OVERDRAFT, 100.0, "1234");
+        atm.withdrawMoney(overdraftCard);
+        atm.topUp(overdraftCard);
+        System.out.println(overdraftCard.getMoney());
     }
+
 }
