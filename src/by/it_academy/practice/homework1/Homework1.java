@@ -9,7 +9,7 @@ public class Homework1 {
 
     public static void main(String[] args) {
         findSumAndMultiplyNumbers();
-        findFesultNumbers();
+        findResultNumbers();
         findLastNumber();
         getSumNumbers();
         findPerimeterAndSquare();
@@ -24,7 +24,7 @@ public class Homework1 {
         System.out.println("Найти произведение двух чисел " + result);
     }
 
-    public static void findFesultNumbers() {
+    public static void findResultNumbers() {
         result = 20 + (3 * 8) / 8;
         System.out.println("Результат вычисления " + result);
     }
