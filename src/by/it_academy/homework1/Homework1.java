@@ -9,7 +9,7 @@ public class Homework1 {
 
     public static void main(String[] args) {
         findSumAndMultiplyNumbers();
-        resultNumbers();
+        findFesultNumbers();
         findLastNumber();
         getSumNumbers();
         findPerimeterAndSquare();
@@ -24,7 +24,7 @@ public class Homework1 {
         System.out.println("Найти произведение двух чисел " + result);
     }
 
-    public static void resultNumbers() {
+    public static void findFesultNumbers() {
         result = 20 + (3 * 8) / 8;
         System.out.println("Результат вычисления " + result);
     }
@@ -36,6 +36,12 @@ public class Homework1 {
 
     public static void getSumNumbers() {
         int number = 1234;
+        for (int i = 0; i < 1234; i++) {
+            int num1 = number / 10;
+            int num12 = number / 10;
+
+
+        }
         System.out.println("Найти сумму цифр ab + cd числа abcd = " +
                 ((number % 10 + number / 10 % 10) + (number / 100 % 10 + number / 1000 % 10)));
     }
@@ -63,8 +69,8 @@ public class Homework1 {
         double number4 = scanner.nextInt();
         System.out.print("Enter fifth number: ");
         double number5 = scanner.nextInt();
-        result =(int) (number1 + number2 + number3) / 3;
-        System.out.print("Среднее арифметическое пяти чисел равно: "+ result);
+        result = (int) (number1 + number2 + number3) / 3;
+        System.out.print("Среднее арифметическое пяти чисел равно: " + result);
     }
 
 }
