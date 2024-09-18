@@ -65,7 +65,7 @@ public class Homework2 {
         double number4 = scanner.nextInt();
         System.out.print("Enter fifth number: ");
         double number5 = scanner.nextInt();
-        int result = (int) (number1 + number2 + number3 + number4 + number5) / 5;
+        double result = (number1 + number2 + number3 + number4 + number5) / 5;
         System.out.print("Среднее арифметическое пяти чисел равно: " + result);
     }
 
