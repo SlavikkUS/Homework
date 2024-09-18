@@ -1,4 +1,4 @@
-package by.it_academy.homework1;
+package by.it_academy.practice.homework1;
 
 import java.util.Scanner;
 
@@ -69,7 +69,7 @@ public class Homework1 {
         double number4 = scanner.nextInt();
         System.out.print("Enter fifth number: ");
         double number5 = scanner.nextInt();
-        result = (int) (number1 + number2 + number3) / 3;
+        result = (int) (number1 + number2 + number3 + number4 + number5) / 5;
         System.out.print("Среднее арифметическое пяти чисел равно: " + result);
     }
 
