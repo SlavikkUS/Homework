@@ -1,15 +1,14 @@
-package by.it_academy.homework1;
+package by.it_academy.practice.homework2;
 
 import java.util.Scanner;
 
-public class Homework1 {
+public class Homework2 {
     public static final int number1 = 10;
     public static final int number2 = 20;
-    public static int result = 0;
 
     public static void main(String[] args) {
         findSumAndMultiplyNumbers();
-        resultNumbers();
+        findResultNumbers();
         findLastNumber();
         getSumNumbers();
         findPerimeterAndSquare();
@@ -24,20 +23,23 @@ public class Homework1 {
         System.out.println("Найти произведение двух чисел " + result);
     }
 
-    public static void resultNumbers() {
-        result = 20 + (3 * 8) / 8;
+    public static void findResultNumbers() {
+
+        double result = 20.0 + (-3.0 * 5.0) / 8.0;
         System.out.println("Результат вычисления " + result);
     }
 
     public static void findLastNumber() {
-        result = number1 % 10;
+        int result = number1 % 10;
         System.out.println("Последняя цифра числа 10 - " + result);
     }
 
     public static void getSumNumbers() {
         int number = 1234;
-        System.out.println("Найти сумму цифр ab + cd числа abcd = " +
-                ((number % 10 + number / 10 % 10) + (number / 100 % 10 + number / 1000 % 10)));
+        int ab = number / 100;
+        int cd = number % 100;
+        int result = ab + cd;
+        System.out.println("Найти сумму цифр \"ab\" + \"cd\" числа \"abcd\" = " + result);
     }
 
     public static void findPerimeterAndSquare() {
@@ -63,8 +65,8 @@ public class Homework1 {
         double number4 = scanner.nextInt();
         System.out.print("Enter fifth number: ");
         double number5 = scanner.nextInt();
-        result =(int) (number1 + number2 + number3) / 3;
-        System.out.print("Среднее арифметическое пяти чисел равно: "+ result);
+        double result = (number1 + number2 + number3 + number4 + number5) / 5;
+        System.out.print("Среднее арифметическое пяти чисел равно: " + result);
     }
 
 }
