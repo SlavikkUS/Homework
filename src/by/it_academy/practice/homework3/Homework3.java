@@ -11,8 +11,6 @@ public class Homework3 {
         findSymmetryFirstAndLastNumbers();
         findRealTriangle();
         findMonth();
-
-
     }
 
     public static String findPrimeNumbers() {
