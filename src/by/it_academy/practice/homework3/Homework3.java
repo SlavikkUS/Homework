@@ -7,9 +7,9 @@ public class Homework3 {
 
     public static void main(String[] args) {
         System.out.println(findPrimeNumbers());
-        getDegreeNumbers();
-        getSymmetryFirstAndLastNumbers();
-        checkRealTriangle();
+        findDegreeNumbers();
+        findSymmetryFirstAndLastNumbers();
+        findRealTriangle();
         findMonth();
 
 
@@ -25,7 +25,7 @@ public class Homework3 {
         return ("Result: " + number1 + " " + number2 + " " + number3);
     }
 
-    public static void getDegreeNumbers() {
+    public static void findDegreeNumbers() {
         System.out.print("Введите число, а мы проверил четность введённых цифр:");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
@@ -44,12 +44,14 @@ public class Homework3 {
                 sum++;
                 System.out.println("Степень четности числа " + number + " равняется: " + sum);
 
-            } else System.out.println("Степень четности числа " + number + " равняется: " + sum);
+            } else
+                System.out.println("Степень четности числа " + number + " равняется: " + sum);
 
-        } else System.out.println("error");
+        } else
+            System.out.println("error");
     }
 
-    public static void getSymmetryFirstAndLastNumbers() {
+    public static void findSymmetryFirstAndLastNumbers() {
         Scanner scanner = new Scanner(System.in);
         System.out.print("Проверка числа на симметричность,введите число: ");
         int number = scanner.nextInt();
@@ -58,11 +60,13 @@ public class Homework3 {
         if (number > 0) {
             if (number1 == number3) {
                 System.out.println("Число " + number + " является симметричным");
-            } else System.out.println("Число " + number + " несимметричное");
-        } else System.out.println("Число отрицательное");
+            } else
+                System.out.println("Число " + number + " несимметричное");
+        } else
+            System.out.println("Число отрицательное");
     }
 
-    public static void checkRealTriangle() {
+    public static void findRealTriangle() {
         System.out.println("Проверка на вероятность сущесствования треугольника");
         Scanner scanner = new Scanner(System.in);
         System.out.print("Длина стороны один: ");
