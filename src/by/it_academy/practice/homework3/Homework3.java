@@ -6,27 +6,29 @@ import java.util.Scanner;
 public class Homework3 {
 
     public static void main(String[] args) {
-        System.out.println(findPrimeNumbers());
-        findDegreeNumbers();
+        System.out.print("Введите целое трехзначное число: ");
+        findPrimeNumbers(findNumbers());
+        System.out.print("Введите число, а мы проверил четность введённых цифр:");
+        findDegreeNumbers(findNumbers());
         findSymmetryFirstAndLastNumbers();
         findRealTriangle();
         findMonth();
     }
 
-    public static String findPrimeNumbers() {
-        Scanner scanner = new Scanner(System.in);
-        System.out.print("Введите целое трехзначное число: ");
-        int number = scanner.nextInt();
+    public static void findPrimeNumbers(int number) {
         int number1 = (number / 100) * 100;
         int number2 = (number / 10 % 10) * 10;
         int number3 = (number % 10);
-        return ("Result: " + number1 + " " + number2 + " " + number3);
+        System.out.println("Result: " + number1 + " " + number2 + " " + number3);
     }
 
-    public static void findDegreeNumbers() {
-        System.out.print("Введите число, а мы проверил четность введённых цифр:");
+    public static int findNumbers() {
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
+        return number;
+    }
+
+    public static void findDegreeNumbers(int number) {
         if (number > 99 && number < 1000) {
             int number1 = number / 100;
             int number2 = number / 10 % 10;
