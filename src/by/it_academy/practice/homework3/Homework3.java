@@ -6,9 +6,7 @@ import java.util.Scanner;
 public class Homework3 {
 
     public static void main(String[] args) {
-        System.out.print("Введите целое трехзначное число: ");
-        findPrimeNumbers(findNumbers());
-        System.out.print("Введите число, а мы проверил четность введённых цифр:");
+        // findPrimeNumbers(findNumbers());
         findDegreeNumbers(findNumbers());
         findSymmetryFirstAndLastNumbers();
         findRealTriangle();
@@ -23,17 +21,18 @@ public class Homework3 {
     }
 
     public static int findNumbers() {
+        System.out.print("Введите целое трехзначное число: ");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
         return number;
     }
 
     public static void findDegreeNumbers(int number) {
+        int number1 = number / 100;
+        int number2 = number / 10 % 10;
+        int number3 = number % 10;
+        int sum = 0;
         if (number > 99 && number < 1000) {
-            int number1 = number / 100;
-            int number2 = number / 10 % 10;
-            int number3 = number % 10;
-            int sum = 0;
             if (number1 % 2 == 0) {
                 sum++;
             }
@@ -42,13 +41,10 @@ public class Homework3 {
             }
             if (number3 % 2 == 0) {
                 sum++;
-                System.out.println("Степень четности числа " + number + " равняется: " + sum);
-
-            } else
-                System.out.println("Степень четности числа " + number + " равняется: " + sum);
-
+            }
+            System.out.println("Степень четности числа " + number + " равняется: " + sum);
         } else
-            System.out.println("error");
+            System.out.println("Error");
     }
 
     public static void findSymmetryFirstAndLastNumbers() {
