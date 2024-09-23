@@ -6,7 +6,7 @@ import java.util.Scanner;
 public class Homework3 {
 
     public static void main(String[] args) {
-        // findPrimeNumbers(findNumbers());
+        findPrimeNumbers(findNumbers());
         findDegreeNumbers(findNumbers());
         findSymmetryFirstAndLastNumbers();
         findRealTriangle();
