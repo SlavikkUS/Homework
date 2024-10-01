@@ -24,13 +24,13 @@ public class Homework5 {
         }
         System.out.println("For Array:  1, 0, 2, 0, 3, 0, 4");
         System.out.println(Arrays.toString(array));
-        int counArray2 = 1;
+        int countArray2 = 1;
         int countArray2_2 = -2;
         int[] array2 = new int[length];
         for (int i = 0; i < array2.length; i++) {
             if (i % 2 == 0) {
-                array2[i] = counArray2;
-                counArray2 = counArray2 + 2;
+                array2[i] = countArray2;
+                countArray2 = countArray2 + 2;
             }
             if (i % 2 != 0) {
                 array2[i] = countArray2_2;
