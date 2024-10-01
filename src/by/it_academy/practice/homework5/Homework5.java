@@ -24,17 +24,17 @@ public class Homework5 {
         }
         System.out.println("For Array:  1, 0, 2, 0, 3, 0, 4");
         System.out.println(Arrays.toString(array));
-        int countArray2 = 1;
-        int countArray2_2 = -2;
+        int countArrayTwo = 1;
+        int countArrayThird = -2;
         int[] array2 = new int[length];
         for (int i = 0; i < array2.length; i++) {
             if (i % 2 == 0) {
-                array2[i] = countArray2;
-                countArray2 = countArray2 + 2;
+                array2[i] = countArrayTwo;
+                countArrayTwo = countArrayTwo + 2;
             }
             if (i % 2 != 0) {
-                array2[i] = countArray2_2;
-                countArray2_2 = countArray2_2 - 2;
+                array2[i] = countArrayThird;
+                countArrayThird = countArrayThird - 2;
             }
 
         }
