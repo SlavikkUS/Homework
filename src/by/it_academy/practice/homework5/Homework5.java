@@ -76,39 +76,27 @@ public class Homework5 {
     }
 
     private static void task4() {
-        System.out.print("Введите длину массива: ");
+        System.out.print("Введите длину массива - ");
         Scanner scanner = new Scanner(System.in);
-        int number = scanner.nextInt();
-        int count = 0;
-        int count2 = 0;
-        int[] array = new int[number];
+        int length = scanner.nextInt();
+        String arrayEven = "";
+        String arrayOdd = "";
+        int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
-            array[i] = (int) (10 + Math.random() * 90);
+            int numbers = (int) (10 + Math.random() * 90);
+            array[i] = numbers;
             if (i % 2 == 0) {
-                count++;
+                arrayEven += array[i] + " ";
             } else {
-                count2++;
-            }
-        }
-        int[] arrayEven = new int[count];
-        int[] arrayOdd = new int[count2];
-        int evenNumbers = 0;
-        int oddNumbers = 0;
-        for (int i = 0; i < array.length; i++) {
-            if (i % 2 == 0) {
-                arrayOdd[oddNumbers] = array[i];
-                oddNumbers++;
-            } else {
-                arrayEven[evenNumbers] = array[i];
-                evenNumbers++;
+                arrayOdd += array[i] + " ";
             }
         }
         System.out.println("Данные всего массива:");
         System.out.println(Arrays.toString(array));
-        System.out.println("Значения из нечетных ячеек массива:");
-        System.out.println(Arrays.toString(arrayEven));
         System.out.println("Значения из четных ячеек массива:");
-        System.out.println(Arrays.toString(arrayOdd));
+        System.out.println(arrayEven);
+        System.out.println("Значения из нечетных ячеек массива:");
+        System.out.println(arrayOdd);
     }
 
     private static void task5() {
