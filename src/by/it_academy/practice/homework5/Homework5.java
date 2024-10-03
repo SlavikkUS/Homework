@@ -5,15 +5,21 @@ import java.util.Scanner;
 
 public class Homework5 {
     public static void main(String[] args) {
-        task1();
+        task1(length());
         task2();
         task3();
-        task4();
+        task4(length());
         task5();
     }
 
-    private static void task1() {
-        int length = 7;
+    private static int length() {
+        System.out.print("Введите длину массива: ");
+        Scanner scanner = new Scanner(System.in);
+        int length = scanner.nextInt();
+        return length;
+    }
+
+    private static void task1(int length) {
         int count = 1;
         int[] array = new int[length];
         for (int i = 0; i < array.length; i++) {
@@ -75,10 +81,7 @@ public class Homework5 {
         }
     }
 
-    private static void task4() {
-        System.out.print("Введите длину массива - ");
-        Scanner scanner = new Scanner(System.in);
-        int length = scanner.nextInt();
+    private static void task4(int length) {
         String arrayEven = "";
         String arrayOdd = "";
         int[] array = new int[length];
@@ -103,15 +106,18 @@ public class Homework5 {
         System.out.print("Метод проверяет, находится ли число Х в массиве, введите число Х = ");
         Scanner scanner = new Scanner(System.in);
         int number = scanner.nextInt();
-        boolean isExit = false;
         int[] array = new int[10];
         for (int i = 0; i < array.length; i++) {
             array[i] = (int) (Math.random() * 100);
-            if (array[i] == number) {
-                isExit = true;
-            }
         }
-        System.out.println(isExit);
+        for (int i = 0; i < array.length; i++) {
+            if (array[i] == number) {
+                System.out.println("Число " + number + " в массиве имеется.");
+                break;
+            } else
+                System.out.println("Число " + number + " в массиве не имеется.");
+            break;
+        }
         System.out.println("Данные всего массива:");
         System.out.println(Arrays.toString(array));
     }
