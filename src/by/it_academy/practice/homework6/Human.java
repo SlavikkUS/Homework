@@ -1,10 +1,10 @@
 package by.it_academy.practice.homework6;
 
 public class Human {
-    private final String name;
-    private final String gender;
-    private final int age;
-    private final int weight;
+    private String name;
+    private String gender;
+    private int age;
+    private int weight;
 
     public Human(String name, String gender, int age, int weight) {
         this.name = name;
@@ -15,11 +15,27 @@ public class Human {
 
     @Override
     public String toString() {
-        return "Human[" +
+        return "Human{" +
                 "name='" + name + '\'' +
                 ", gender='" + gender + '\'' +
                 ", age=" + age +
                 ", weight=" + weight +
-                ']';
+                '}';
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getGender() {
+        return gender;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public int getWeight() {
+        return weight;
     }
 }
