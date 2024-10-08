@@ -6,7 +6,7 @@ public class Main {
         printObject(human);
         Student student = new Student("Margo", "Female", 23, 56, 1);
         printObject(student);
-        student.setAgeStudy(2);
+        student.increaseAgeStudy();
         printObject(student);
     }
 

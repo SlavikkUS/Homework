@@ -20,12 +20,13 @@ public class Student extends Human {
                 '}';
     }
 
-    public int getAgeStudy() {
-        return ageStudy;
+    public void increaseAgeStudy() {
+        this.ageStudy = ageStudy + 1;
+        System.out.println("Увеличение года обучения" + ageStudy);
     }
 
-    public void setAgeStudy(int ageStudy) {
-        this.ageStudy += ageStudy;
+    public int getAgeStudy() {
+        return ageStudy;
     }
 }
 
