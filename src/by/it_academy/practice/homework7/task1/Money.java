@@ -24,6 +24,16 @@ public class Money {
         return this;
     }
 
+    public Money addDifference(Money money) {
+        rubles -= money.getRubles();
+        coins -= money.getCoins();
+        if (coins < 0) {
+            rubles -= rubles / 100;
+            coins = rubles * 100 + coins;
+        }
+        return this;
+    }
+
     public void checkBiggerObject(Money money) {
         if ((this.rubles - money.rubles) < 0) {
             System.out.println(" Второй объект больше ");

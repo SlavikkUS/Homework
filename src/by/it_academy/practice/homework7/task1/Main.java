@@ -4,6 +4,7 @@ public class Main {
     public static void main(String[] args) {
         Money money = new Money(3, 2);
         money.addSum(money);
+        money.addDifference(money);
         Money money1 = new Money(3, 0);
         System.out.println(money);
         System.out.println(money1);
