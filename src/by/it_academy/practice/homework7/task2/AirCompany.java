@@ -6,16 +6,16 @@ import java.util.StringJoiner;
 
 public class AirCompany {
     private Fly[] flies;
-    private Planes[] planes;
-    private Helicopters[] helicopters;
-    private Kavdrobers[] kavdrobers;
+    private Plane[] planes;
+    private Helicopter[] helicopters;
+    private Drone[] drones;
 
 
     public AirCompany(Fly[] flies) {
         this.flies = flies;
         this.planes = planes;
         this.helicopters = helicopters;
-        this.kavdrobers = kavdrobers;
+        this.drones = drones;
     }
 
     public int findGeneralCapacity() {
@@ -57,7 +57,7 @@ public class AirCompany {
         return new StringJoiner(", ", AirCompany.class.getSimpleName() + "[", "]")
                 .add("planes=" + Arrays.toString(planes))
                 .add("helicopters=" + Arrays.toString(helicopters))
-                .add("kavdrobers=" + Arrays.toString(kavdrobers))
+                .add("kavdrobers=" + Arrays.toString(drones))
                 .toString();
     }
 }

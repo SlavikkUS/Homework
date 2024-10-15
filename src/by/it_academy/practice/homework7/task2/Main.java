@@ -2,15 +2,15 @@ package by.it_academy.practice.homework7.task2;
 
 public class Main {
     public static void main(String[] args) {
-        Planes airBus = new Planes("AirBus", 310, 3, 600);
+        Plane airBus = new Plane("AirBus", 310, 3, 600);
         System.out.println(airBus);
-        Planes boeing_777 = new Planes("Boeing777", 300, 5, 500);
+        Plane boeing_777 = new Plane("Boeing777", 300, 5, 500);
         System.out.println(boeing_777);
-        Helicopters robbinsonR44 = new Helicopters("Robbinson_R44", 5, 2, 79);
+        Helicopter robbinsonR44 = new Helicopter("Robbinson_R44", 5, 2, 79);
         System.out.println(robbinsonR44);
-        Helicopters mi_4 = new Helicopters("MI-4", 21, 2, 80);
+        Helicopter mi_4 = new Helicopter("MI-4", 21, 2, 80);
         System.out.println(mi_4);
-        Kavdrobers kv = new Kavdrobers("KV-3", 1, 2, 10);
+        Drone kv = new Drone("KV-3", 1, 2, 10);
         System.out.println(kv);
 
         Fly[] flies = {airBus, boeing_777, robbinsonR44, mi_4, kv};
