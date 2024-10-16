@@ -6,6 +6,7 @@ public class Main {
         System.out.println(money);
         money.addDifference(money);
         Money money1 = new Money(3, 0);
+        money.addSum(money);
         System.out.println(money);
         System.out.println(money1);
         money.checkBiggerObject(money1);

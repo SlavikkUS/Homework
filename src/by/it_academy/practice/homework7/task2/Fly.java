@@ -8,7 +8,7 @@ public abstract class Fly {
     int carrying;
     int flightRange;
 
-    public Fly(String name, int capacity, int carrying, int flightRange) {
+    protected Fly(String name, int capacity, int carrying, int flightRange) {
         this.name = name;
         this.capacity = capacity;
         this.carrying = carrying;
@@ -33,7 +33,7 @@ public abstract class Fly {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ", Fly.class.getSimpleName() + "[", "]")
+        return new StringJoiner(", ",  "[", "]")
                 .add("name='" + name + "'")
                 .add("capacity=" + capacity)
                 .add("carrying=" + carrying)

@@ -4,12 +4,4 @@ public class Drone extends Fly {
     public Drone(String name, int capacity, int carrying, int flightRange) {
         super(name, capacity, carrying, flightRange);
     }
-
-    public int getCapacity() {
-        return capacity;
-    }
-
-    public int getCarrying() {
-        return carrying;
-    }
 }

@@ -7,29 +7,22 @@ public class Plane extends Fly {
     }
 
     @Override
-    public String toString() {
-        final StringBuilder sb = new StringBuilder("Planes{");
-        sb.append("name='").append(name).append('\'');
-        sb.append(", capacity=").append(capacity);
-        sb.append(", carrying=").append(carrying);
-        sb.append(", flightRange=").append(flightRange);
-        sb.append('}');
-        return sb.toString();
-    }
-
     public String getName() {
-        return name;
+        return super.getName();
     }
 
+    @Override
     public int getCapacity() {
-        return capacity;
+        return super.getCapacity();
     }
 
+    @Override
     public int getCarrying() {
-        return carrying;
+        return super.getCarrying();
     }
 
+    @Override
     public int getFlightRange() {
-        return flightRange;
+        return super.getFlightRange();
     }
 }

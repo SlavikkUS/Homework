@@ -44,7 +44,7 @@ public class Money {
         } else if (sum == sum2) {
             System.out.println("Равны");
         } else {
-            System.out.println("Первый больше");
+            System.out.println("Первый объект больше");
         }
     }
 

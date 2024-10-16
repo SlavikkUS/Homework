@@ -1,21 +1,10 @@
 package by.it_academy.practice.homework7.task2;
 
-
-import java.util.Arrays;
-import java.util.StringJoiner;
-
 public class AirCompany {
     private Fly[] flies;
-    private Plane[] planes;
-    private Helicopter[] helicopters;
-    private Drone[] drones;
-
 
     public AirCompany(Fly[] flies) {
         this.flies = flies;
-        this.planes = planes;
-        this.helicopters = helicopters;
-        this.drones = drones;
     }
 
     public int findGeneralCapacity() {
@@ -50,14 +39,5 @@ public class AirCompany {
                 );
             }
         }
-    }
-
-    @Override
-    public String toString() {
-        return new StringJoiner(", ", AirCompany.class.getSimpleName() + "[", "]")
-                .add("planes=" + Arrays.toString(planes))
-                .add("helicopters=" + Arrays.toString(helicopters))
-                .add("kavdrobers=" + Arrays.toString(drones))
-                .toString();
     }
 }
