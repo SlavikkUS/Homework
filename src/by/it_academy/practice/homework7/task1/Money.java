@@ -35,16 +35,16 @@ public class Money {
     }
 
     public void checkBiggerObject(Money money) {
-        if ((this.rubles - money.rubles) < 0) {
-            System.out.println(" Второй объект больше ");
-        } else if ((this.rubles - money.rubles) == 0) {
-            if ((this.coins - money.coins) < 0) {
-                System.out.println("Второй объект больше");
-            } else if ((this.coins - money.coins) == 0) {
-                System.out.println("Числа равны ");
-            } else System.out.println("Первый объект больше");
+        int sum;
+        int sum2;
+        sum = this.rubles * 100 + this.coins;
+        sum2 = money.rubles * 100 + money.coins;
+        if (sum < sum2) {
+            System.out.println("Второй объект больше");
+        } else if (sum == sum2) {
+            System.out.println("Равны");
         } else {
-            System.out.println("Первый объект больше");
+            System.out.println("Первый больше");
         }
     }
 
