@@ -58,6 +58,6 @@ public class Money {
 
     @Override
     public String toString() {
-        return this.rubles + "," + this.coins;
+        return this.rubles + " руб " + this.coins + " копеек ";
     }
 }
