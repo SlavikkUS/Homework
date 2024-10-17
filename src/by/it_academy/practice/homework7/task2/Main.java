@@ -17,6 +17,6 @@ public class Main {
         System.out.println("Total flight range: " + airCompany.findGeneralFlightRange());
 
         System.out.println("Найти самолет в компании, соответствующий заданному диапазону параметров.");
-        airCompany.findByCarrying(4, 6);
+        airCompany.findFinalAirShip();
     }
 }
