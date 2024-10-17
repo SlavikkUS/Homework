@@ -32,11 +32,9 @@ public class AirCompany {
     }
 
     public void findByCarrying(int max, int min) {
-        for (Fly i : flies) {
-            if (i.getCarrying() > max && i.getCarrying() < min) {
-                System.out.println("Подходящий самолет: " + i.getName() +
-                        " Грузоподъёмность борта составляет: " + i.getCarrying()
-                );
+        for (Fly fly : flies) {
+            if (fly.getCarrying() > max && fly.getCarrying() < min) {
+                System.out.println("Подходящий самолет со следующими характеристиками: " + fly);
             }
         }
     }
