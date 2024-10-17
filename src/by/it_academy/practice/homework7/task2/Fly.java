@@ -15,10 +15,6 @@ public abstract class Fly {
         this.flightRange = flightRange;
     }
 
-    public String getName() {
-        return name;
-    }
-
     public int getCapacity() {
         return capacity;
     }
@@ -33,7 +29,7 @@ public abstract class Fly {
 
     @Override
     public String toString() {
-        return new StringJoiner(", ",  "[", "]")
+        return new StringJoiner(", ", "[", "]")
                 .add("name='" + name + "'")
                 .add("capacity=" + capacity)
                 .add("carrying=" + carrying)
