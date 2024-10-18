@@ -33,32 +33,33 @@ public class AirCompany {
         return fullCapacity;
     }
 
-    public Object findShipForCapacity(int min, int max) {
+    public Fly findShipForCapacity(int min, int max) {
         for (Fly fly : flies) {
             if (fly.getCapacity() > min && fly.getCapacity() < max) {
-                return "Подходящее воздушное судно " + fly;
+                return  fly;
             }
         }
-        return "Нет подходящего воздушного транспорта";
+        return null;
     }
 
 
-    public Object findShipForCarrying(int min, int max) {
+    public Fly findShipForCarrying(int min, int max) {
         for (Fly fly : flies) {
             if (fly.getCarrying() > min && fly.getCarrying() < max) {
-                return "Подходящее воздушное судно " + fly;
+                return fly;
             }
         }
-        return "Нет подходящего воздушного транспорта";
+        return null;
     }
 
-    public Object findShipForFlightRange(int min, int max) {
+    public Fly findShipForFlightRange(int min, int max) {
         for (Fly fly : flies) {
-            if (fly.getCarrying() > min && fly.getCarrying() < max) {
-                return "Подходящее воздушное судно " + fly;
+            if (fly.getFlightRange() > min && fly.getFlightRange() < max) {
+
+                return fly;
             }
         }
-        return "Нет подходящего воздушного транспорта";
+        return null;
     }
 
     public void findFinalAirShip() {
