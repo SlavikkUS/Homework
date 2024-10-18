@@ -36,7 +36,7 @@ public class AirCompany {
     public Fly findShipForCapacity(int min, int max) {
         for (Fly fly : flies) {
             if (fly.getCapacity() > min && fly.getCapacity() < max) {
-                return  fly;
+                return fly;
             }
         }
         return null;
