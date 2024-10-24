@@ -56,20 +56,19 @@ public class Homework8 {
     }
 
     public static void findSolutionTask4() {
-        String txt = "1975 1976 1977 1978 1979 1980 1981 1982 1983 1984";
-        String firstAge = "";
-        String lasttAge = "";
-        String[] strings = txt.split(" ");
-        for (String string : strings) {
-            if (string.equals("1977")) {
-                firstAge += string;
-            } else if (string.equals("1982")) {
-                lasttAge += string;
+        String str = "1975 1976 1977 1978 1979 1980 1981 1982 1983 1984";
+        String firstAge = "1977";
+        String lastAge = "1982";
+        Pattern pattern = Pattern.compile(firstAge);
+        Pattern pattern2 = Pattern.compile(lastAge);
+        Matcher matcher = pattern.matcher(str);
+        Matcher matcher2 = pattern2.matcher(str);
+        System.out.println("Years:");
+        while (matcher.find() && matcher2.find()) {
+            for (int i = Integer.parseInt(matcher.group()); i <= Integer.parseInt(matcher2.group()); i++) {
+                System.out.println(i);
+
             }
-        }
-        System.out.println("Result:");
-        for (int i = Integer.parseInt(firstAge); i <= Integer.parseInt(lasttAge); i++) {
-            System.out.println(i);
         }
     }
 
