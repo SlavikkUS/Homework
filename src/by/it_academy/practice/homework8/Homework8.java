@@ -65,7 +65,7 @@ public class Homework8 {
 
     public static void findSolutionTask4() {
         String str = "1975 1976 1977 1978 1979 1980 1981 1982 1983 1984";
-        Pattern pattern = Pattern.compile("1977 1978 1979 1980 1981 1982");
+        Pattern pattern = Pattern.compile("19[78][^3-6]");
         Matcher matcher = pattern.matcher(str);
         System.out.println("Years:");
         while (matcher.find()) {
