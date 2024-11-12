@@ -1,17 +1,18 @@
 package by.it_academy.practice.homework10;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 public class PhoneBook {
     private Map<String, List<String>> numbersPhone;
 
-    public PhoneBook(Map<String, List<String>> numbersPhone) {
-        this.numbersPhone = numbersPhone;
+    public PhoneBook() {
+        numbersPhone = new HashMap<>();
     }
 
-    public Object addNumbers(String key, String value, Map<String, List<String>> numbersPhone) {
+    public Object addNumbers(String key, String value) {
         if (numbersPhone.containsKey(key)) {
             return numbersPhone.get(key).add(value);
         } else {

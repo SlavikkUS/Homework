@@ -1,24 +1,22 @@
 package by.it_academy.practice.homework10;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 public class Homework10 {
     private static Map<String, Integer> usersMap = new HashMap<>();
-    private static Map<String, List<String>> numbersPhone = new HashMap<>();
 
     public static void main(String[] args) {
         reserveKeyAndValuePositions(addHashMap());
-        PhoneBook phoneBook = new PhoneBook(numbersPhone);
+        PhoneBook phoneBook = new PhoneBook();
         addUsers(phoneBook);
     }
 
     public static void addUsers(PhoneBook phoneBook) {
-        phoneBook.addNumbers("Usenkov", "+375291112234", numbersPhone);
-        phoneBook.addNumbers("Lysenkov", "+375291112334", numbersPhone);
-        phoneBook.addNumbers("Usenkov", "+375299998877", numbersPhone);
-        phoneBook.addNumbers("Martynov", "80293456688", numbersPhone);
+        phoneBook.addNumbers("Usenkov", "+375291112234");
+        phoneBook.addNumbers("Lysenkov", "+375291112334");
+        phoneBook.addNumbers("Usenkov", "+375299998877");
+        phoneBook.addNumbers("Martynov", "80293456688");
         System.out.println(phoneBook);
     }
 
