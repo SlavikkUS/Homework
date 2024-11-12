@@ -5,7 +5,6 @@ import java.util.Map;
 
 public class Homework10 {
     private static Map<String, Integer> usersMap = new HashMap<>();
-
     public static void main(String[] args) {
         reserveKeyAndValuePositions(addHashMap());
         PhoneBook phoneBook = new PhoneBook();
