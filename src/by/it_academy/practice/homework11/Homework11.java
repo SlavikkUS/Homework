@@ -4,13 +4,14 @@ import java.util.*;
 
 public class Homework11 {
     public static void main(String[] args) {
-        findCopy();                         // Реализация подсчета количества вхождений элемента более 2 раз.
+        findCopy();
         MyStack<Integer> myStack = new MyStack<>();
         addItems(myStack);
         popMyStack(myStack);
         isEmpty(myStack);
         pick(myStack);
     }
+    //one
 
     public static void addItems(MyStack<Integer> myStack) {
         myStack.push(1);

@@ -21,9 +21,9 @@ public class MyStack<T> {
     }
 
     public T pop() {
-        var lastElement = myStack.get(myStack.size() - 1);
-        var lastIndex = myStack.lastIndexOf(lastElement);
-        myStack.remove(lastIndex);
+        var lastElementIndex = myStack.size() - 1;
+        var lastElement = myStack.get(lastElementIndex);
+        myStack.remove(lastElementIndex);
         return lastElement;
     }
 
@@ -36,9 +36,10 @@ public class MyStack<T> {
 
     @Override
     public String toString() {
-        final StringBuilder sb = new StringBuilder("MyStack{");
+        final StringBuilder sb = new StringBuilder("");
         sb.append("").append(myStack);
-        sb.append('}');
+        sb.append(' ');
         return sb.toString();
     }
 }
+
