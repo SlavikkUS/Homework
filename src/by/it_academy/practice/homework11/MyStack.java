@@ -5,11 +5,9 @@ import java.util.List;
 
 public class MyStack<T> {
     private List<T> myStack;
-    private int top;
 
     public MyStack() {
         myStack = new ArrayList<>();
-        top = -1;
     }
 
     public Boolean isEmpty() {
