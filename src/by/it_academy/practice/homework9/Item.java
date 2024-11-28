@@ -1,26 +1,29 @@
 package by.it_academy.practice.homework9;
 
 
-public enum Item {
-    REFRIGERATOR(23),
-    TV(34),
-    PLAY_STATION(11),
-    BALL(5);
+public class Item {
+    String name;
+    private int price;
 
-    private Integer price;
 
-    Item(Integer price) {
+    public Item(String name, int price) {
+        this.name = name;
         this.price = price;
     }
 
-    public Integer getPrice() {
+    public String getName() {
+        return name;
+    }
+
+    public int getPrice() {
         return price;
     }
 
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Item{");
-        sb.append("price=").append(price);
+        sb.append("name='").append(name).append('\'');
+        sb.append(", price=").append(price);
         sb.append('}');
         return sb.toString();
     }
