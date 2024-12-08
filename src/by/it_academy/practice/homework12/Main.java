@@ -1,18 +1,18 @@
 package by.it_academy.practice.homework12;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Main {
+    private static final List<String> valueList = Arrays.asList("a1", "a2", "a3", "b1", "b2", "b3", "c2", "c1", "c5");
+
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        sorttt(Comparator.comparing(Book::getAuthor), "-Sort by Authors:");
-        sorttt(Comparator.comparing(Book::getTittle), "-Sort by Tittle:");
-        sorttt(Comparator.comparing(Book::getPages), "-Sort by Pages:");
-        sortByAuthorTask3();
+        sortByParameter(Comparator.comparing(Book::getAuthor), "-Sort by Authors:");
+        sortByParameter(Comparator.comparing(Book::getTittle), "-Sort by Tittle:");
+        sortByParameter(Comparator.comparing(Book::getPages), "-Sort by Pages:");
+        sortBySublistAuthor();
+        sortByStream();
     }
 
     private static List<Book> create() {
@@ -24,13 +24,13 @@ public class Main {
         return books;
     }
 
-    private static void sorttt(Comparator<Book> comparator, String txt) {
-        System.out.println(txt);
+    private static void sortByParameter(Comparator<Book> comparator, String text) {
+        System.out.println(text);
         List<Book> sortList = create().stream().sorted(comparator.thenComparing(Book::toString)).toList();
         System.out.println(sortList);
     }
 
-    private static void sortByAuthorTask3() {
+    private static void sortBySublistAuthor() {
         Map<String, List<Book>> sortedByAuthor = create().stream()
                 .collect(Collectors.groupingBy(Book::getAuthor));
         for (Map.Entry<String, List<Book>> item : sortedByAuthor.entrySet()) {
@@ -39,6 +39,20 @@ public class Main {
                 System.out.println("- " + book.getTittle());
             }
         }
+    }
+
+    private static void sortByStream() {
+        long number = valueList.stream().filter(word -> !word.matches("\\w3"))
+                .sorted((o1, o2) -> Integer.compare(o1.charAt(1), (o2.charAt(1))))
+                .sorted((o1, o2) -> o2.compareTo(o1))
+                .skip(1)
+                .sorted((o1, o2) -> Collections.reverseOrder().compare(o2, o1))
+                .skip(1)
+                .sorted((o1, o2) -> Collections.reverseOrder().compare(o1, o2))
+                .map(String::toUpperCase)
+                .peek(System.out::println)
+                .count();
+        System.out.printf("Amount of elements: %d ", number);
     }
 
     private static List<Book> readBooksFromFile(String filePath) throws IOException, ClassNotFoundException {
