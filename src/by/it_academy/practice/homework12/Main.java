@@ -2,13 +2,16 @@ package by.it_academy.practice.homework12;
 
 import java.io.*;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 public class Main {
     public static void main(String[] args) throws IOException, ClassNotFoundException {
-        sortByParametersTask2();
+        sorttt(Comparator.comparing(Book::getAuthor), "-Sort by Authors:");
+        sorttt(Comparator.comparing(Book::getTittle), "-Sort by Tittle:");
+        sorttt(Comparator.comparing(Book::getPages), "-Sort by Pages:");
         sortByAuthorTask3();
     }
 
@@ -21,21 +24,10 @@ public class Main {
         return books;
     }
 
-    private static void sortByParametersTask2() {
-        List<Book> sortdByAuthor = create().stream()
-                .sorted((o1, o2) -> o1.getAuthor()
-                        .compareTo(o2.getAuthor()))
-                .toList();
-        System.out.println("Sort books by author: " + sortdByAuthor);
-        List<Book> sortedByTittle = create().stream()
-                .sorted((o1, o2) -> o1.getTittle()
-                        .compareTo(o2.getTittle()))
-                .toList();
-        System.out.println("Sort books by tittle: " + sortedByTittle);
-        List<Book> sortedByPages = create().stream()
-                .sorted((o1, o2) -> Integer.compare(o1.getPages(), o2.getPages()))
-                .toList();
-        System.out.println("Sort books by pages " + sortedByPages);
+    private static void sorttt(Comparator<Book> comparator, String txt) {
+        System.out.println(txt);
+        List<Book> sortList = create().stream().sorted(comparator.thenComparing(Book::toString)).toList();
+        System.out.println(sortList);
     }
 
     private static void sortByAuthorTask3() {
@@ -52,7 +44,6 @@ public class Main {
     private static List<Book> readBooksFromFile(String filePath) throws IOException, ClassNotFoundException {
         FileInputStream fileInputStream = new FileInputStream(filePath);
         ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);
-
         List<Book> readBook = (List<Book>) objectInputStream.readObject();
         return readBook;
     }
