@@ -12,7 +12,7 @@ public class Main {
         sortByParameter(Comparator.comparing(Book::getTittle), "-Sort by Tittle:");
         sortByParameter(Comparator.comparing(Book::getPages), "-Sort by Pages:");
         sortBySublistAuthor();
-        sortByStream();
+        sortByStreamForTask3();
     }
 
     private static List<Book> create() {
@@ -41,7 +41,7 @@ public class Main {
         }
     }
 
-    private static void sortByStream() {
+    private static void sortByStreamForTask3() {
         long number = valueList.stream().filter(word -> !word.matches("\\w3"))
                 .sorted((o1, o2) -> Integer.compare(o1.charAt(1), (o2.charAt(1))))
                 .sorted((o1, o2) -> o2.compareTo(o1))
