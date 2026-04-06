@@ -11,7 +11,6 @@ public class Homework11 {
         isEmpty(myStack);
         pick(myStack);
     }
-    //one
 
     public static void addItems(MyStack<Integer> myStack) {
         myStack.push(1);
